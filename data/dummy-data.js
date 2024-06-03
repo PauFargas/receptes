@@ -333,5 +333,39 @@ export const MEALS = [
     true,
     true,
     true
+  ),
+  new Meal(
+    'm11',
+    ['c8'],
+    'Arròs màgic',
+    'affordable',
+    'simple',
+    'https://images.unsplash.com/photo-1630914441929-0d8ea69f95e6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    40,
+    [
+      'Arròs de vasito',
+      'Shiitake',
+      'Pebrot verd i vermell',
+      'Ceba',
+      'All',
+      'Ous',
+      'Pastanaga',
+      'Heura',
+      'Salsa de soja'
+    ],
+    [
+      "Fer verdures i shiitake molt petites i posar-les a Wok",
+      "Separar les verdures i fer revoltillo d'ous",
+      "Separar el revoltillo",
+      "Posar vasito al microones i fer allet a wok 1 minut",
+      "Barrejar arròs i all i saltejar una mica",
+      "Ajuntar-ho tot i saltejar",
+      "Afegir culleradeta de salsa de Soja de Sirena i Bonpreu",
+      "Rajolinet molt petit d'oli de sèsam"
+    ],
+    true,
+    false,
+    true,
+    true,
   )
 ];

@@ -367,5 +367,37 @@ export const MEALS = [
     false,
     true,
     true,
-  )
+  ),
+  new Meal(
+    'm12',
+    ['c10', 'c6'],
+    'Paella de verdures',
+    'affordable',
+    'challenging',
+    'https://images.unsplash.com/photo-1604543519952-12b7038886c0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    60,
+    [
+      'Ceba',
+      'Pastanaga',
+      'Pebrot verd i vermell',
+      'All talladet petit',
+      'Heura',
+      'Tomàquet en salsa',
+      'Shiitake',
+      'Caldo de verdures'
+    ],
+    [
+      "tallar els ingredients",
+      "Primer la ceba juntament amb la pastanaga en una paella amb oli calent",
+      "Passada una estona s'afegeixen els pebrots amb els shiitake",
+      "Finalment hi posem l'all",
+      "Aboquem una mica de salsa de tomàquet per a fer el sofregit",
+      "Podem posar una mica de sucre morè",
+      "Un cop fet el sofregit hi posem el caldo i tapem 18 minuts"
+    ],
+    true,
+    true,
+    true,
+    true,
+  ),
 ];

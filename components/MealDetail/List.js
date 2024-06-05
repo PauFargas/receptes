@@ -1,12 +1,16 @@
 import { Text, View, StyleSheet } from "react-native";
 
-function List({data}){
+function List({data}) {
     return(        
-        data.map((dataPoint) => (
-        <View key={dataPoint} style={styles.listItem}>
-            <Text style={styles.itemText}>{dataPoint}</Text>
-        </View>))
-    )    
+        data.map((dataPoint) => {
+            console.log(dataPoint); // Esto imprimirá cada dataPoint en la consola
+            return (
+                <View key={dataPoint} style={styles.listItem}>
+                    <Text style={styles.itemText}>{dataPoint}</Text>
+                </View>
+            );
+        })
+    );    
 }
 
 export default List;

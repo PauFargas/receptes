@@ -10,6 +10,7 @@ import { Ionicons } from '@expo/vector-icons'
 import MealsOverview from './screens/MealsOverview';
 import MealDetailScreen from './screens/MealDetailScreen';
 import FavoritesScreen from './screens/FavoritesScreen';
+import FavoritesContextProvider from './store/context/favorites-context';
 
 
 const Stack = createNativeStackNavigator();
@@ -19,13 +20,13 @@ function DrawerNavigator(){
   return(
     <Drawer.Navigator 
     screenOptions={{
-      headerStyle:{backgroundColor: '#351401'},
-      headerTintColor: 'white',
-      sceneContainerStyle: {backgroundColor: '#3f2f25'},
-      drawerContentStyle: {backgroundColor: "#351401"},
-      drawerInactiveTintColor: 'white',
-      drawerActiveTintColor: "#351401",
-      drawerActiveBackgroundColor: "#dbad91"
+      headerStyle:{backgroundColor: 'white'},
+      headerTintColor: 'black',
+      sceneContainerStyle: {backgroundColor: 'white'},
+      drawerContentStyle: {backgroundColor: "white"},
+      drawerInactiveTintColor: 'black',
+      drawerActiveTintColor: "black",
+      drawerActiveBackgroundColor: "#e8f5f8"
     }}>
       <Drawer.Screen name="Categories" component={CategoriesScreen} 
       options={{
@@ -46,28 +47,30 @@ export default function App() {
   return (
     <>
     <StatusBar style='light'/>
-    <NavigationContainer>
-      <Stack.Navigator
-      screenOptions={{
-        headerStyle: {backgroundColor: '#351401'}, //A STACK NAVIGATOR PER A QUE SIGUI GLOBAL
-        headerTintColor: 'white',
-        contentStyle: {backgroundColor: '#3f2f25'}
-      }}>
-        <Stack.Screen name="Drawer" 
-        component={DrawerNavigator} 
-        options={{
-          headerShown: false 
-        }}/>
-        <Stack.Screen name="MealsOverview" 
-        component={MealsOverview} 
-        />
-        <Stack.Screen  name="MealDetail" 
-        component={MealDetailScreen}
-        options={{
-          title: 'Info del plat'
-        }}/>
-      </Stack.Navigator>
-    </NavigationContainer>
+    <FavoritesContextProvider>
+      <NavigationContainer>
+        <Stack.Navigator
+        screenOptions={{
+          headerStyle: {backgroundColor: '#ffffff'}, //A STACK NAVIGATOR PER A QUE SIGUI GLOBAL
+          headerTintColor: 'black',
+          contentStyle: {backgroundColor: '#ffffff'}
+        }}>
+          <Stack.Screen name="Drawer" 
+          component={DrawerNavigator} 
+          options={{
+            headerShown: false 
+          }}/>
+          <Stack.Screen name="MealsOverview" 
+          component={MealsOverview} 
+          />
+          <Stack.Screen  name="MealDetail" 
+          component={MealDetailScreen}
+          options={{
+            title: 'Info del plat'
+          }}/>
+        </Stack.Navigator>
+      </NavigationContainer>
+    </FavoritesContextProvider>
     </>
   );
 }
